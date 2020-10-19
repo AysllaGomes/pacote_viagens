@@ -6,4 +6,7 @@
     <string name="_2_dias">2 Dias</string>
     <string name="r_243_99">R$ 243,99</string>
     <string name="banner_inicial_dos_pacotes">Banner Inicial dos Pacotes</string>
+    <string name="realizar_pagamento">Realizar Pagamento</string>
+    <string name="preco_final">Preço final:</string>
+    <string name="imagem_do_pacote">Imagem do pacote</string>
 </resources>
