@@ -4,6 +4,7 @@ import java.util.Calendar;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.ImageView;
@@ -36,6 +37,9 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         mostraDias(pacote);
         mostraPreco(pacote);
         mostraData(pacote);
+
+        Intent intent = new Intent(this, PagamentoActivity.class);
+        startActivity(intent);
     }
 
     private void mostraLocal(Pacote pacote) {
