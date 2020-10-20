@@ -2,6 +2,7 @@ package ayslla.gomes.viagens.ui.activity;
 
 import java.math.BigDecimal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -25,6 +26,9 @@ public class PagamentoActivity extends AppCompatActivity {
         Pacote pacote = new Pacote("São Paulo", "sao_paulo_sp", 2, new BigDecimal("243.99"));
 
         mostraPreco(pacote);
+
+        Intent intent = new Intent(this, ResumoCompraActivity.class);
+        startActivity(intent);
     }
 
     private void mostraPreco(Pacote pacote) {
