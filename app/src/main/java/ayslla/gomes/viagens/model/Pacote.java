@@ -1,8 +1,9 @@
 package ayslla.gomes.viagens.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Pacote {
+public class Pacote implements Serializable {
 
     private final int dias;
     private final String local;

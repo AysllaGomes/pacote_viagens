@@ -2,18 +2,19 @@ package ayslla.gomes.viagens.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.content.Intent;
 import android.widget.TextView;
-
-import java.math.BigDecimal;
+import android.widget.ImageView;
+import android.graphics.drawable.Drawable;
 
 import ayslla.gomes.viagens.R;
 import ayslla.gomes.viagens.model.Pacote;
 import ayslla.gomes.viagens.util.DataUtil;
 import ayslla.gomes.viagens.util.MoedaUtil;
 import ayslla.gomes.viagens.util.ResourceUtil;
+
+import static ayslla.gomes.viagens.ui.activity.PacoteActivityConstantes.CHAVE_PACOTE;
 
 public class ResumoCompraActivity extends AppCompatActivity {
 
@@ -25,9 +26,19 @@ public class ResumoCompraActivity extends AppCompatActivity {
         setContentView(R.layout.activity_resumo_compra);
 
         setTitle(TITLE_APPBAR);
+        carregaPacoteRecebido();
+    }
 
-        Pacote pacote = new Pacote("São Paulo", "sao_paulo_sp", 2, new BigDecimal("243.99"));
+    private void carregaPacoteRecebido() {
+        Intent intent = getIntent();
+        if (intent.hasExtra(CHAVE_PACOTE)) {
+            final Pacote pacote = (Pacote) intent.getSerializableExtra(CHAVE_PACOTE);
 
+            inicializaCampos(pacote);
+        }
+    }
+
+    private void inicializaCampos(Pacote pacote) {
         mostraLocal(pacote);
         mostraImagem(pacote);
         mostraData(pacote);

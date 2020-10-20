@@ -1,7 +1,5 @@
 package ayslla.gomes.viagens.ui.activity;
 
-import java.math.BigDecimal;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +17,8 @@ import ayslla.gomes.viagens.util.ResourceUtil;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static ayslla.gomes.viagens.ui.activity.PacoteActivityConstantes.CHAVE_PACOTE;
+
 public class ResumoPacoteActivity extends AppCompatActivity {
 
     public static final String TITLE_APPBAR = "Resumo do Pacote";
@@ -29,23 +29,41 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_resumo_pacote);
 
         setTitle(TITLE_APPBAR);
+        carregaPacoteRecebido();
+    }
 
-        Pacote pacote = new Pacote("São Paulo", "sao_paulo_sp", 2, new BigDecimal("243.99"));
+    private void carregaPacoteRecebido() {
+        Intent intent = getIntent();
+        if (intent.hasExtra(CHAVE_PACOTE)) {
+            final Pacote pacote = (Pacote) intent.getSerializableExtra(CHAVE_PACOTE);
 
+            inicializaCampos(pacote);
+            configuraBotao(pacote);
+        }
+    }
+
+    private void inicializaCampos(Pacote pacote) {
         mostraLocal(pacote);
         mostraImagem(pacote);
         mostraDias(pacote);
         mostraPreco(pacote);
         mostraData(pacote);
+    }
 
-        Button buttonRealizaPagamento = findViewById(R.id.resumo_pacote_button_realiza_pagamento);
-        buttonRealizaPagamento.setOnClickListener(new View.OnClickListener() {
+    private void configuraBotao(Pacote pacote) {
+        Button button = findViewById(R.id.resumo_pacote_button_realiza_pagamento);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ResumoPacoteActivity.this, PagamentoActivity.class);
-                startActivity(intent);
+                vaiParaPagamento(pacote);
             }
         });
+    }
+
+    private void vaiParaPagamento(Pacote pacote) {
+        Intent intent = new Intent(ResumoPacoteActivity.this, PagamentoActivity.class);
+        intent.putExtra(CHAVE_PACOTE, pacote);
+        startActivity(intent);
     }
 
     private void mostraLocal(Pacote pacote) {
