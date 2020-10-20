@@ -1,11 +1,11 @@
 package ayslla.gomes.viagens.ui.activity;
 
-import java.util.Calendar;
 import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.content.Intent;
 import android.widget.TextView;
 import android.widget.ImageView;
 import android.graphics.drawable.Drawable;
@@ -38,8 +38,14 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         mostraPreco(pacote);
         mostraData(pacote);
 
-        Intent intent = new Intent(this, PagamentoActivity.class);
-        startActivity(intent);
+        Button buttonRealizaPagamento = findViewById(R.id.resumo_pacote_button_realiza_pagamento);
+        buttonRealizaPagamento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ResumoPacoteActivity.this, PagamentoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void mostraLocal(Pacote pacote) {

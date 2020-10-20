@@ -2,8 +2,10 @@ package ayslla.gomes.viagens.ui.activity;
 
 import java.math.BigDecimal;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.content.Intent;
 import android.widget.TextView;
 
 import ayslla.gomes.viagens.R;
@@ -27,8 +29,14 @@ public class PagamentoActivity extends AppCompatActivity {
 
         mostraPreco(pacote);
 
-        Intent intent = new Intent(this, ResumoCompraActivity.class);
-        startActivity(intent);
+        Button buttonRealizaPagamento = findViewById(R.id.pagamento_botao_finaliza_compra);
+        buttonRealizaPagamento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PagamentoActivity.this, ResumoCompraActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void mostraPreco(Pacote pacote) {

@@ -2,9 +2,11 @@ package ayslla.gomes.viagens.ui.activity;
 
 import java.util.List;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.content.Intent;
 import android.widget.ListView;
+import android.widget.AdapterView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,15 +27,20 @@ public class ListaPacotesActivity extends AppCompatActivity {
         setTitle(TITULO_APPBAR);
 
         configuraLista();
-
-        Intent intent = new Intent(this, ResumoPacoteActivity.class);
-        startActivity(intent);
     }
 
     private void configuraLista() {
         ListView listaDePacotes = findViewById(R.id.lista_pacotes_listView);
         List<Pacote> pacoteList = new PacoteDAO().lista();
         listaDePacotes.setAdapter(new ListaPacotesAdapter(pacoteList, this));
+
+        listaDePacotes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(ListaPacotesActivity.this, ResumoPacoteActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
