@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.ImageView;
 import android.graphics.drawable.Drawable;
 
+import ayslla.gomes.viagens.MapsActivity;
 import ayslla.gomes.viagens.R;
 import ayslla.gomes.viagens.model.Pacote;
 import ayslla.gomes.viagens.util.DataUtil;
@@ -23,6 +24,8 @@ public class ResumoPacoteActivity extends AppCompatActivity {
 
     public static final String TITLE_APPBAR = "Resumo do Pacote";
 
+    private  Button buttonMap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,19 @@ public class ResumoPacoteActivity extends AppCompatActivity {
 
         setTitle(TITLE_APPBAR);
         carregaPacoteRecebido();
+
+        buttonMap = (Button) findViewById(R.id.resumo_pacote_button_map);
+        buttonMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivityMap();
+            }
+        });
+    }
+
+    public void openActivityMap() {
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
     }
 
     private void carregaPacoteRecebido() {
