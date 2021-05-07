@@ -1,14 +1,15 @@
 package ayslla.gomes.viagens.ui.activity;
 
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.content.Intent;
-import android.widget.TextView;
 import android.widget.ImageView;
-import android.graphics.drawable.Drawable;
+import android.widget.TextView;
 
-import ayslla.gomes.viagens.MapsActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import ayslla.gomes.viagens.R;
 import ayslla.gomes.viagens.model.Pacote;
 import ayslla.gomes.viagens.util.DataUtil;
@@ -16,15 +17,13 @@ import ayslla.gomes.viagens.util.DiasUtil;
 import ayslla.gomes.viagens.util.MoedaUtil;
 import ayslla.gomes.viagens.util.ResourceUtil;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import static ayslla.gomes.viagens.ui.activity.PacoteActivityConstantes.CHAVE_PACOTE;
 
 public class ResumoPacoteActivity extends AppCompatActivity {
 
     public static final String TITLE_APPBAR = "Resumo do Pacote";
 
-    private  Button buttonMap;
+   // private  Button buttonMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +32,7 @@ public class ResumoPacoteActivity extends AppCompatActivity {
 
         setTitle(TITLE_APPBAR);
         carregaPacoteRecebido();
-
+/*
         buttonMap = (Button) findViewById(R.id.resumo_pacote_button_map);
         buttonMap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,13 +40,14 @@ public class ResumoPacoteActivity extends AppCompatActivity {
                 openActivityMap();
             }
         });
+        */
     }
-
-    public void openActivityMap() {
+/*
+     public void openActivityMap() {
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
     }
-
+*/
     private void carregaPacoteRecebido() {
         Intent intent = getIntent();
         if (intent.hasExtra(CHAVE_PACOTE)) {
