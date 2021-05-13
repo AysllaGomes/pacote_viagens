@@ -23,4 +23,5 @@
     <string name="compra_resumo">Confira o resumo da compra:</string>
     <string name="conteudo_do_banner_inicial">Imagem inicial</string>
     <string name="title_activity_maps">Map</string>
+    <string name="local_de_partida">Local de Partida</string>
 </resources>
