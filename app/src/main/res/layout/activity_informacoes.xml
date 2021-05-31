@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/informacao_orientacao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/info_informacao_pessoal"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <EditText
+        android:id="@+id/informacao_pessoal_nome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:maxLength="60"
+        android:inputType="text"
+        android:hint="@string/nome_pessoa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/informacao_pessoal_nome"
+        android:autofillHints="Nome Completo"
+    />
+
+    <EditText
+        android:id="@+id/inform"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/mes_nascimento"
+        android:inputType="number"
+        android:maxLength="8"
+        app:layout_constraintBottom_toBottomOf="@+id/informacao_pessoal_nome_cvc_cartao"
+        app:layout_constraintStart_toStartOf="@id/informacao_pessoal_nome_numero_cartao"
+        android:autofillHints="Data de Nascimento"
+    />
+
+    <EditText
+        android:id="@+id/informacao_pessoal_cpf"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/ano_cartao"
+        android:inputType="number"
+        android:maxLength="14"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/informacao_pessoal_nome_cvc_cartao"
+        app:layout_constraintStart_toEndOf="@id/informacao_pessoal_nome_mes_cartao"
+        android:autofillHints="CPF"
+    />
+
+    <Button
+        android:id="@+id/informacao_pessoal_nome_botao_finaliza_compra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_redondo_laranja"
+        android:text="Nome a ser inserido"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/informacao_pessoal_cpf"
+        app:layout_constraintStart_toStartOf="@+id/informacao_pessoal_cpf"
+        app:layout_constraintTop_toBottomOf="@+id/informacao_pessoal_cpf"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
