@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/informacao_dados_pessoais_info_orientacao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/info_dados_pessoais"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <TextView
+        android:id="@+id/informacao_dados_pessoais_null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/informacao_dados_pessoais_info_orientacao"
+    />
+
+    <TextView
+        android:id="@+id/informacao_dados_pessoais_preco_null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/informacao_dados_pessoais_null"
+        app:layout_constraintTop_toBottomOf="@+id/informacao_dados_pessoais_null"
+    />
+
+    <EditText
+        android:id="@+id/informacao_dados_pessoais_nome_completo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:maxLength="60"
+        android:inputType="text"
+        android:hint="@string/nome_completo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/informacao_dados_pessoais_preco_null"
+        android:autofillHints="Nome Completo"
+    />
+
+    <EditText
+        android:id="@+id/informacao_dados_pessoais_idade"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/idade"
+        android:inputType="number"
+        android:maxLength="2"
+        app:layout_constraintBottom_toBottomOf="@+id/informacao_dados_pessoais_telefone"
+        app:layout_constraintStart_toStartOf="@id/informacao_dados_pessoais_nome_completo"
+        android:autofillHints="Idade"
+    />
+
+    <EditText
+        android:id="@+id/informacao_dados_pessoais_cpf"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/exemplo_cpf"
+        android:inputType="number"
+        android:maxLength="11"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/informacao_dados_pessoais_telefone"
+        app:layout_constraintStart_toEndOf="@id/informacao_dados_pessoais_idade"
+        android:autofillHints="CPF"
+    />
+
+    <EditText
+        android:id="@+id/informacao_dados_pessoais_telefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="11"
+        android:inputType="number"
+        android:hint="@string/exemplo_telefone"
+        app:layout_constraintTop_toBottomOf="@id/informacao_dados_pessoais_nome_completo"
+        app:layout_constraintEnd_toEndOf="@id/informacao_dados_pessoais_nome_completo"
+        android:autofillHints="Telefone"
+    />
+
+    <EditText
+        android:id="@+id/informacao_dados_pessoais_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="@string/e_mail"
+        app:layout_constraintEnd_toEndOf="@+id/informacao_dados_pessoais_telefone"
+        app:layout_constraintStart_toStartOf="@+id/informacao_dados_pessoais_idade"
+        app:layout_constraintTop_toBottomOf="@+id/informacao_dados_pessoais_telefone"
+        android:autofillHints="E-mail"
+    />
+
+    <Button
+        android:id="@+id/informacao_dados_pessoais_redireciona_pagamento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="244dp"
+        android:background="@drawable/button_redondo_laranja"
+        android:text="@string/realizar_pagamento"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/informacao_dados_pessoais_email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/informacao_dados_pessoais_email"
+        app:layout_constraintTop_toBottomOf="@+id/informacao_dados_pessoais_email" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

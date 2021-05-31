@@ -32,6 +32,7 @@
         <activity android:name=".ui.activity.ResumoCompraActivity" />
         <activity android:name=".ui.activity.PagamentoActivity" />
         <activity android:name=".ui.activity.ResumoPacoteActivity" />
+        <activity android:name=".ui.activity.InformacaoDadosPessoaisActivity" />
         <activity android:name=".ui.activity.ListaPacotesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,16 +6,18 @@
     <string name="_2_dias">2 Dias</string>
     <string name="r_243_99">R$ 243,99</string>
     <string name="banner_inicial_dos_pacotes">Banner Inicial dos Pacotes</string>
-    <string name="realizar_pagamento">Realizar Pagamento</string>
+    <string name="informar_dados_pessoais">Informar Dados Pessoais</string>
     <string name="preco_final">Preço final:</string>
     <string name="imagem_do_pacote">Imagem do pacote</string>
     <string name="info_pagamento_credito">Digite as informações do cartão de crédito que você deseja usar para o pagamento</string>
+    <string name="info_dados_pessoais">Digite as informações do usuário que irá realizar a viagem</string>
     <string name="valor_da_compra">Valor da compra:</string>
     <string name="numero_cartao">Número do cartão</string>
     <string name="mm_cartao">MM</string>
     <string name="ano_cartao">AA</string>
     <string name="cvc_cartao">CVC</string>
     <string name="nome_no_cartao">Nome no cartão</string>
+    <string name="realizar_pagamento">Realizar Pagamento</string>
     <string name="finalizar_compra">Finalizar compra</string>
     <string name="mascara_nome_cartao">abcdefghijklmnopqrstuvwxyzçABCDEFGHIJKLMNOPQRSTUVWXYZÇ\u0020</string>
     <string name="parabens">Parabéns!</string>
@@ -26,4 +28,9 @@
     <string name="local_de_partida">Local de Partida</string>
     <string name="imagem_refer_nciando_o_local_que_ir_viajar">Imagem referênciando o local que irá viajar</string>
     <string name="json_pacote_viagem">JSON Pacote viagem</string>
+    <string name="nome_completo">Nome completo</string>
+    <string name="idade">Idade</string>
+    <string name="exemplo_cpf">999.999.999-99</string>
+    <string name="exemplo_telefone">(99) 9999-9999</string>
+    <string name="e_mail">E-mail</string>
 </resources>

@@ -80,12 +80,12 @@
     />
 
     <Button
-        android:id="@+id/resumo_pacote_button_realiza_pagamento"
+        android:id="@+id/resumo_pacote_button_informa_dados_pessoais"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:background="@drawable/button_redondo_laranja"
-        android:text="@string/realizar_pagamento"
+        android:text="@string/informar_dados_pessoais"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
