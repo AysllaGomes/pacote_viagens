@@ -103,5 +103,38 @@
         tools:text="R$ 243,99"
     />
 
+    <fragment
+        android:id="@+id/fragment"
+        android:name="ayslla.gomes.viagens.Map"
+        android:layout_width="281dp"
+        android:layout_height="234dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="340dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.898"
+        tools:ignore="MissingConstraints"
+        tools:layout="@layout/fragment_map"
+    />
+
+    <TextView
+        android:id="@+id/local_partida"
+        android:layout_width="281dp"
+        android:layout_height="33dp"
+        android:layout_margin="8dp"
+        android:background="#FFFFFF"
+        android:text="@string/local_de_partida"
+        android:textColor="#F2514F5E"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.583"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
