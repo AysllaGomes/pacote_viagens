@@ -30,6 +30,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:src="@sample/pacotes.json/pacotes/imagem"
+                android:contentDescription="@string/json_pacote_viagem"
             />
 
             <TextView

@@ -71,7 +71,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resumo_compra_confira_resumo"
         app:srcCompat="@drawable/sao_paulo_sp"
-    />
+        android:contentDescription="@string/imagem_refer_nciando_o_local_que_ir_viajar" />
 
     <TextView
         android:id="@+id/resumo_compra_local_pacote"
